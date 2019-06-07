@@ -1,33 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100vh;
+  background-color: #E1E2E1;
+  color: #333;
+}
+
+.nav-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  height: 70px;
+  background-image:
+  linear-gradient(to right, pink, purple, transparent),
+  url('assets/sidebar-4.jpg');
+  box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.6px;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
+@keyframes move {
+    0%   {transform: rotate(-10deg);}
+    25%  {transform: rotate(10deg);}
+    50%  {transform: rotate(-10deg);}
+    75%  {transform: rotate(10deg);}
+    100% {margin-left: 0; transform: rotate(-10deg);}
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-logo {
+  color: #333;
+  font-size: 2em;
+
+  float: left;
+  cursor: pointer;
+  animation-name: move;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
